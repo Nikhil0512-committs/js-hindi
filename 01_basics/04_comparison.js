@@ -6,4 +6,4 @@
 // === , strict check it checks the value as well as dataType
 
 console.log("2" ==2) //true
-console.log("2"===2) //false
+console.log("2"===2) //false , as it checks both the dataType and value
