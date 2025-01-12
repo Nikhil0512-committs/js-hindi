@@ -31,3 +31,9 @@ const myFunction = function(){
     console.log("Hello World");
     
 }
+
+
+
+*****************
+
+// Stack(Primitive)- gives copy , Heap(Non-Primitive)- gives reference of original value
