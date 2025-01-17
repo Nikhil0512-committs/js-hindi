@@ -37,3 +37,16 @@ const myFunction = function(){
 *****************
 
 // Stack(Primitive)- gives copy , Heap(Non-Primitive)- gives reference of original value
+// Stack (ek ke upar ek)  heap(just a normal square or rectangle)
+
+
+let userOne = {
+    email: "nikhildotcom",
+    upi: "abc@ibl"
+}
+let userTwo = userOne
+userTwo.email = "nikhilGoogledotcom"
+
+console.log(userOne.email)
+console.log(userTwo.email) 
+// both will give the 2nd email as its an example of heap memory (refernce)
