@@ -27,5 +27,5 @@ JSuser.greeting = function(){
 console.log(JSuser.greeting()) // gives Hello World
 
 JSuser.greetingTwo = function(){
-    console.log(`hello JS user, ${this.name}`)
+    console.log(`hello JS user, ${this.name }`)
 } // this. se object wali chize aajati hai
