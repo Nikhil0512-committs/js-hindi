@@ -7,7 +7,7 @@
 </head>
 <body>
    <div class="bg-black">
-    <h1 class="heading">DOM learning on chai aur Code</h1>
+    <h1 id = "title" class="heading">DOM learning on chai aur Code</h1>
     <p>Lorem ipsum dolor sit amet.</p>
     // DOM - Document Object model
    </div> 
@@ -15,3 +15,33 @@
 </html>
 
 // document.getElementById('heading').innerHTML("Hello") // isse text hojayega uss class ka jiska class heading heading
+// document.getElementById("") , isse puri details aajayengi
+// document.getElementById("").id , isse id ka naam aajayega
+// .className se class ka naam aajayega 
+
+// document.getElementById("").getAttribute("") // naam aajayega unka
+// document.getElementById("title").setAttribute('class','test') , class ke naam change hojayega from previous one to text
+
+const title = document.getElementById("title")
+title.style.backgroundColor = "green" // so iska color green hojayega bg ka
+title.style.padding = "15px"
+
+title.innerText // yeh karna pe sirf vohi content aata hai jo web page pe visible ho
+title.textContent // iske through saara content aajata hai whether it is invisible
+title.innerHTML // isme agar koi html bhi likha hai andar to voh bhi dikhta hai with proper tags
+
+document.querSelector('h1') // page ka first h1 de dega with all its properties
+kisi id ko lena ho to # karke le lo in querySelector and kisi class ko . karke
+
+NodeList is not a proper array
+
+document.querySelectorAll('li') // kind of array of li aayega jo hamne diya hai in web NodeList deta hai
+
+const tempLiList = document.querySelectorAll('li')
+tempLiList[0].style.color = "green" // first li element ka color green ho jayega
+
+tempLilist.foreach( function(l){
+    l.style.backgroundColor = "green"
+})
+
+Array.from("") // kisi dusre form ki chiz array me convert ho jayegi
