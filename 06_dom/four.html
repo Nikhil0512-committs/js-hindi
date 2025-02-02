@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code (DOm)</title>
+</head>
+<body style ="background-color:#212121 ; color : white">
+    <ul class="language">
+       <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langname){
+        const li = document.createElement('li');
+        li.innerHTML = `${langname}`;
+        document.querySelector('.language').appendChild(li);
+    }
+    addLanguage(python) // ab yeh bhi add hojayega 
+
+    // Better way to do the above work
+    function addoptiLanguage(langName){
+        const li = document.createElement('li');
+        const addText = document.createTextNode(langName);
+        li.appendChild(addText);
+        document.querySelector('.language').appendChild(li)
+    }
+
+    // Edit
+    const secLang = document.querySelector("li:nth-child(2)")
+    // secLang.innerHTML = "MOJo"
+    const newLi = document.createElement('li')
+    newLi.textContent = 'MOJO'
+    secLang.reaplaceWith(newLi)
+
+    // remove
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
+</script>
+</html>
