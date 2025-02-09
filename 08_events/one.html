@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events </title>
+</head>
+<body>
+    
+</body>
+<script>
+    document.getElementById('owl'). onclick = function(){
+        alert("OWL")
+    } // There's no problem in it but event listeners use karne chahiye jo zyada features provide karte hai
+    document.getElementById('owl').addEventListener('click',function(){ alert("OWL")
+    })
+
+    document.getElementById("owl").addEventListener('click',function(e){
+        console.log(e)
+    },false) // false as a third element likhte hai just as default
+    // type , timestamp , defaultPrevented
+    // target , toElement , srcElement , currentTarget,
+    // clientX , clientY , screenX , screenY
+    // altkey , ctrlkey , shiftkey , keyCode
+
+    // jaise hamne upar 3rd element me false ya true likha hai to uska matlab yeh hai ki agar ek element pe 2 events lagaye hai to aur agarfalse likha ho to it acts as bubbling , it goes from bottom to top whereas in case of true it goes from top to bottom
+
+    document.getElementById('owl').addEventListener('click',function(e){
+       console.log("OWL clicked")
+       e.stopPropogation() // isse upar bubbling nahi hogi owl ki
+    }, false)
+
+    document.getElementById("google").addEventListener('click',function(e){
+    e.preventDefault(); // isse yeh hoga ki jo bhi pehle property di hai isse hamne in html , that won't work , for eg agar agar anchor tag hota toh voh kaam nahi karta iss property ke baad
+    console.log("google clicked")
+    }, false)
+      
+// How to remove images
+document.querySelector('#images').addEventlistener('click',function(e){
+   console.log(e.target.tagName);
+   if(e.target.tagName === 'IMG'){
+    let removeIt = e.target.parentNode
+   removeIt.remove(); // isse jaise image pe click karenge toh voh remove hojayegi
+   } ,false)
+   
+</script>
+</html>

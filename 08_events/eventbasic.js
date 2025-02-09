@@ -1,0 +1,1 @@
+// All events in JavaScript run sequentially but exceptions are there, For eg in html file in a <img tag we can use onclick ="alert('owl')" / isse kya hoga ki jaise hi image pe click karenge to ek alert aayega ki owl hai.
