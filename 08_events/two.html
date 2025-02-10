@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    setTimeout(function(){
+       console.log("Nikhil")
+    },2000) // 2000 is time in miliseconds which is 2seconds , upar ke function me 2s ke baad Nikhil print hoga in console
+    // setTimeout ek baar kaam karta hai jabki setInterval har kuch seconds ke baad kaam repeat karta hai
+
+    // For example
+
+    const changeName = function(){
+        document.querySelector('h1').innerHTML = "Best JS Series"
+    }
+    const changeMe = setTimeout(changeName,2000) // isse 2second baad h1 ka text khud hi change hojayega
+
+    document.querySelector("#stop").addEventListener('click',function(){
+       clearTimeout(changeMe)
+       console.log("STOPPED")
+    },false)
+    // ab agar hum 2s se pehle stop pe click kar diya toh voh text change nahi hoga and that's what clearTimeout do
+    
+</script>
+</html>
