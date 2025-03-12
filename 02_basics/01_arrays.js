@@ -22,4 +22,3 @@ const myn1 = myArr.slice(1,3) // 1 aur 2 index ka element aaayega except 3rd
 
 const myn2 = myArr.splice(1,3) // isme 1 se 3 tak saare output me aayenge
 // splice original array ko manipulate karta hai which means voh particular elements uss array se nikal leta hai whereas slice doesn't do so.
-
