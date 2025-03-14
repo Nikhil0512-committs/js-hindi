@@ -39,3 +39,10 @@ const ans = promisifiedMyOwnSetTimeout(1000)
 ans.then( function(){
     console.log("Timeout is done")
 })
+
+
+// async , await
+async function myGoodfn(){
+    let response = await fn()
+    return response;
+}
